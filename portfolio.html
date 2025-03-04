@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Portfolio Website</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fontColor:#091057;
+    --background:#024CAA;
+    --white:#DBD3D3;
+}
+body{
+    font-family: 'Poppins';
+}
+/* Navbar*/
+nav {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    height: 80px;
+    padding: 0px 50px;
+}
+nav a{
+    text-decoration: none;
+}
+nav .left a{
+    color: var(--fontColor);
+    font-size: 22px;
+    font-weight: 600;
+    
+}
+nav .right a{
+    color: var(--fontColor);
+    margin: 0 10px;
+    font-weight: bold;
+   
+
+}
+nav .right a span{
+    margin-left: 10px;
+}
+nav .right a:last-child{
+    color: whitesmoke;
+    background: var(--fontColor);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/*Hero-Section*/
+.hero-section{
+    display: flex;
+    margin: 50px 0px;
+    margin-bottom: 100px;
+}
+.hero-section .text{
+    flex: 5;
+    padding: 0px 50px;
+    margin-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    
+}
+.hero-section .headshot{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section .text h2{
+    font-weight: bold;
+    font-size: 36px;
+}
+.hero-section .text .links{
+    margin-top: 35px;
+}
+.hero-section .text .links a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--background);
+    margin: 0px 10px;
+    border: 2px solid var(--background);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.hero-section .text .links a:hover{
+    color: var(--fontColor);
+    border: 2px solid var(--fontColor);
+}
+.hero-section .text .links a span{
+    margin-left: 5px;
+    font-weight: bold;
+}
+.hero-section .headshot img{
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    
+}
+/*Skills-Section*/
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.skills-section h2{
+    font-size: 38px;
+    text-align: center;
+}
+.skills-section .text{
+    text-align: center;
+    margin-bottom: 30px;   
+}
+.skills-section .cells{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skills-section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px 15px;
+    border: 1.5px solid hsl(0, 0%, 88%);
+    margin: 10px;
+    border-radius: 5px;
+}
+.skills-section .cells .cell img{
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+.skills-section .cells .cell span{
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 5px;
+}
+/*Testimony-section*/
+.testimony-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.testimony-section h2{
+    font-size: 38px;
+    text-align: center;
+}
+.testimony-section .group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.testimony-section .group .personal img{
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    flex: 2;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.testimony-section .group .personal p{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 15px;
+}
+.testimony-section .group .text{
+    flex: 5;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+/*contact-section*/
+.contact-section{
+    padding: 0 50px;
+}
+.contact-section h2{
+    text-align: center;
+    font-size: 38px;
+}
+.contact-section .group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 30px;
+}
+.contact-section .group .text{
+    flex: 2;
+}
+.contact-section .group form{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+.contact-section .group form label{
+    margin-top: 15px;
+}
+.contact-section .group form input{
+    margin-top: 5px;
+    height: 30px;
+}
+.contact-section .group form textarea{
+    margin-top: 5px;
+    height: 100px;
+}
+.contact-section .group form button{
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: var(--background);
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    /* Navbar*/
+    nav{
+        padding: 0px 20px;
+    }
+    nav .right a span{
+        display: none;
+    }
+    nav .right a:last-child{
+        color: var(--fontColor);
+        background: white;
+    }
+    nav .right a i{
+        font-size: 22px;
+    }
+    /*Hero-Section*/
+    .hero-section .text{
+        padding: 0px 20px;
+    }
+    /*Skills-Section*/
+    .skills-section{
+        padding: 0px 20px;
+    }
+    .skills-section .cells .cell span{
+        font-size: 16px;
+    }
+    /*Testimony-section*/
+    .testimony-section{
+        padding: 0 20px;
+    }
+    /*contact-section*/
+    .contact-section{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 850px)
+{
+    /*Hero-Section*/
+    .hero-section .text h2{
+        font-size: 30px;
+    }
+    .hero-section .headshot img{
+        width: 300px;
+        height: 300px;
+    }
+    .skills-section h2{
+        font-size: 30px;
+    }
+    /*Testimony-section*/
+    .testimony-section h2{
+        font-size: 30px;
+    }
+    .testimony-section .group{
+        flex-direction: column;
+    }
+    /*contact-section*/
+    .contact-section h2{
+        font-size: 30px;
+    }
+    .contact-section .group{
+        flex-direction: column;
+    }
+}
+@media (max-width: 760px)
+{
+    .hero-section{
+        flex-direction: column-reverse;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <a href="">Mathan Raj</a>
+        </div>
+        <div class="right">
+            <a href=""><i class="fa-brands fa-github"></i><span>Github</span></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i><span>Linkedin</span></a>
+            <a href=""><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="text">
+                <h2>Hi,i'm Mathan</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sequi illum aliquam vero mollitia consequatur repellendus nulla blanditiis id nihil laudantium molestiae odit tempora fugiat dolore excepturi dolorem alias sunt ipsam culpa amet, accusamus suscipit voluptates dicta. Quis quod accusamus mollitia. Sunt dolorem cum, et praesentium aut labore sequi. Eum enim placeat molestiae ea, cumque hic assumenda, ex voluptas architecto nulla, porro commodi! Illo et neque facilis eius. Recusandae dolor error ipsum vitae iure consequuntur.</p>
+                <div class="links">
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    <a href="#testimony">
+                        <i class="fa-solid fa-pen"></i>
+                        <span>Testimony</span>
+                    </a>
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="headshot">
+                <img src="update_head.jpg.jpg">
+            </div>
+        </section>
+        <section class="skills-section" id="skills">
+            <h2>Skills</h2>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aut, delectus aperiam quia reiciendis modi sit veritatis. Ab illum vitae reprehenderit alias eum libero reiciendis ex voluptatum repellat deleniti, quas nesciunt tempora dolorum, ullam dolorem.</p>
+            </div>
+            <div class="cells">
+                <div class="cell">
+                    <img src="htmllogo..jpg">
+                    <span>Html</span>
+                </div>
+                <div class="cell">
+                    <img src="csslogo.jpg">
+                    <span>Css</span>
+                </div>
+                <div class="cell">
+                    <img src="javascriptlogo.jpg">
+                    <span>Javascript</span>
+                </div>
+                <div class="cell">
+                    <img src="reactlogo.jpg">
+                    <span>React</span>
+                </div>
+                <div class="cell">
+                    <img src="javalogo.jpg">
+                    <span>Java</span>
+                </div>
+            </div>
+        </section>
+        <section id="testimony" class="testimony-section">
+            <h2>Testimony</h2>
+            <div class="group">
+                <div class="personal">
+                    <img src="update_head.jpg.jpg">
+                    <p>Mathan Raj</p>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum eum aut dicta, saepe deserunt reiciendis inventore. Quaerat laborum nesciunt repellat expedita distinctio id corporis totam eaque at. Obcaecati animi, perferendis amet voluptates rem tempore numquam culpa quam esse voluptatum quas, iusto vitae distinctio expedita totam nostrum. Laboriosam ea odio cupiditate? Voluptates, obcaecati quas dicta tempora eligendi quibusdam accusamus dolore possimus commodi maiores ab eius architecto, ducimus blanditiis, molestiae exercitationem! Exercitationem quam id maxime voluptatibus numquam!</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="group">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil in at quam minima nemo molestias vel libero. Saepe, consequatur veritatis est molestias, quas similique alias sapiente ducimus tempore optio nostrum cumque odio ea omnis, non harum quaerat pariatur labore. Modi architecto doloremque eius nostrum ipsa. Autem explicabo blanditiis temporibus.</p>
+                </div>
+                <form>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name">
+                    <label for="email">Email: </label>
+                    <input type="text" id="email">
+                    <label for="message">Message: </label>
+                    <textarea id="message"></textarea>
+                    <button type="button">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
